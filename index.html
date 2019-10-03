@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Police system</title>
+    <link rel="stylesheet" type="text/css" href="custom.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+  </head>
+  <body>
+    <div class="parent">
+      <div w3-include-html="inc/nav.html"></div>
+
+      <div class="main-container">
+        <div class="jumbotron card card-image"
+          style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+          <div class="text-white text-center py-5 px-4">
+            <div>
+              <h2 class="card-title h1-responsive pt-3 mb-5 font-bold">New Case Form</strong></h2>
+              <p class="mx-5 mb-5"> <form>
+                <div class="form-row">
+                   <div class="form-group col-md-6">
+                     <label for="inputEmail4"></label>
+                     <input type="email" class="form-control" id="inputEmail4" placeholder="Reference Number" />
+                   </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4"></label>
+                  <input type="date" name="bday">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress"></label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Suspect Name" />
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress2"></label>
+                  <input type="text" class="form-control" id="inputAddress2" placeholder="Victim Name" />
+                </div>
+                <div class="form-row">
+                  
+                  <div class="form-group col-md-12">
+                    <label for="inputState"></label>
+                    </div>
+                  
+                </div>
+                <!-- <div class="form-group">
+                    <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" />                    
+                  </div> -->
+                </div>  
+                   <button type="button" class="btn btn-outline-success">Submit</button>
+                   <button type="button" class="btn btn-outline-danger">Cancel</button>
+                   <button type="button" class="btn btn-outline-primary">Existing Cases</button>
+              </form>     </p>
+             </div>
+          </div>
+        </div>
+       </div>
+      <div>
+       
+      </div>
+    </div>
+    <script>
+      function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /* Loop through a collection of all HTML elements: */
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+          elmnt = z[i];
+          /*search for elements with a certain atrribute:*/
+          file = elmnt.getAttribute("w3-include-html");
+          if (file) {
+            /* Make an HTTP request using the attribute value as the file name: */
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+              if (this.readyState == 4) {
+                if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                /* Remove the attribute, and call this function once more: */
+                elmnt.removeAttribute("w3-include-html");
+                includeHTML();
+              }
+            }
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /* Exit the function: */
+            return;
+          }
+        }
+      }
+      includeHTML();
+    </script>
+
+  </body>
+</html>
