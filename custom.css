@@ -1,0 +1,29 @@
+.parent {
+  background-image:url(./img/002.jpg);
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+.navbar {
+  background-color: rgba(157, 164, 206, 0.8);
+}
+.nav{
+  float: right;
+}
+  .card-title {
+    text-emphasis-color:dark-blue;
+
+  }
+.main-container{
+  margin:30px;
+  border: solid 20px #80808082;
+  padding:0px;
+}
+
+.top-nav{
+  display:flex;
+  align-items: center;
+}
+.logo{
+  height: 90px;
+}
