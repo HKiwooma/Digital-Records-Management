@@ -6,121 +6,116 @@
   <link rel="stylesheet" type="text/css" href="../css/police.css" />
   <link rel="stylesheet" href="../css/bootstrap.css" />
   <link rel="stylesheet" href="../js/bootstrap.js" />
-
 </head>
 
 <body>
   <div class="parent">
-
-    <nav class="navbar navbar-expand-lg navbar-pink bg-grey">
+    
+    <div class="navbar">
       <a class="navbar-brand" href="#" style="max-width: 13%;">
         <img src="../images/Ugpolicelogo.jpg" class="img-fluid">
       </a>
-      <a class="navbar-brand" href="#">Navbar w/ text</a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">complaints</a>
-          </li>
-        </ul>
-        <span class="navbar-text">
-          Navbar text with an inline element
-        </span>
-      </div>
-    </nav>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
 
-    <div class="row bg-image">
 
-      <div class="col-lg-9">
-        whitegold
-        <div class="container-fluid">
-          <div class="row center">
-            <div class="col-lg-4-a">
-              <form>
-                <div class="form-row">
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="First name">
+    <div class="body">
+      <div class="row bg-image">
+        <div class="col-lg-9">
+          whitegold
+          <div class="container-fluid">
+            <div class="row center">
+              <div class="col-lg-4-a">
+                <form>
+                  <div class="form-row">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Last name">
+                    </div>
                   </div>
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Last name">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">Email</label>
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">Password</label>
+                      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    </div>
                   </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                  <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
                   </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputPassword4">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                  <div class="form-group">
+                    <label for="inputAddress2">Address 2</label>
+                    <input type="text" class="form-control" id="inputAddress2"
+                      placeholder="Apartment, studio, or floor">
                   </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputAddress">Address</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                </div>
-                <div class="form-group">
-                  <label for="inputAddress2">Address 2</label>
-                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputCity">City</label>
+                      <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputState">Region</label>
+                      <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>Central ug</option>
+                        <option>Eastern ug</option>
+                        <option>Western ug</option>
+                        <option>Northern ug</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                      <label for="inputZip">Position</label>
+                      <input type="text" class="form-control" id="inputZip">
+                    </div>
                   </div>
-                  <div class="form-group col-md-4">
-                    <label for="inputState">Region</label>
-                    <select id="inputState" class="form-control">
-                      <option selected>Choose...</option>
-                      <option>Central ug</option>
-                      <option>Eastern ug</option>
-                      <option>Western ug</option>
-                      <option>Northern ug</option>
-                    </select>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                      <label class="form-check-label" for="gridCheck">
+                        I accept that all information about me is genuine and correct.
+                      </label>
+                      <button type="submit" class="btn btn-primary">Sign UP</button>
+                    </div>
                   </div>
-                  <div class="form-group col-md-2">
-                    <label for="inputZip">Position</label>
-                    <input type="text" class="form-control" id="inputZip">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                      I accept that all information about me is genuine and correct.
-                    </label>
-                    <button type="submit" class="btn btn-primary">Sign UP</button>
-                  </div>
-                </div>
 
-              </form>
-            </div>
-            <div class="col-lg-4-b">
-              daniel
-              <img src="avatar.png" alt="Avatar" class="avatar">
+                </form>
+              </div>
+              <div class="col-lg-4-b">
+                daniel
+                <img src="avatar.png" alt="Avatar" class="avatar">
+              </div>
             </div>
           </div>
+
+        </div>
+
+        <div class="col-sm-3">
+          racheal
         </div>
 
       </div>
 
-      <div class="col-sm-3">
-        racheal
-      </div>
-
     </div>
-
   </div>
 
 </body>
