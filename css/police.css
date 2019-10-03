@@ -1,0 +1,57 @@
+.thead {
+    color: blueviolet;
+    background-color: rgb(230, 173, 183);
+}
+.col-lg-9 {
+    background-color: rgb(198, 198, 248);
+    height: 550px;
+    width: 70%;
+    background-image: url(https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjYxuTStPvkAhUrxYUKHXG8Ds0QjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fwww.newvision.co.ug%252Fnew_vision%252Fnews%252F1424676%252Fministry-internal-affairs-uganda-police-force%26psig%3DAOvVaw0ZoyQo3lBZ83_1Lb1y2Lj7%26ust%3D1570027732373466&psig=AOvVaw0ZoyQo3lBZ83_1Lb1y2Lj7&ust=1570027732373466) 
+
+}
+
+.col-sm-3 {
+    background-color: rgb(241, 147, 163);
+    height: 550px;
+    width: 30%;
+}
+
+.col-lg-4-a {
+    background-color:rgb(188, 188, 211);
+    height: 400px;
+    width: 550px;
+    padding: 40px;
+}
+
+.col-lg-4-b {
+    background-color: rgb(197, 147, 238); 
+    height: 400px;
+    width: 15%; 
+}
+
+.center {
+    padding: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px; 
+}
+
+.parent {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px; 
+    background-color: rgb(180, 180, 206);
+    width: 100%;
+    height: 100%; 
+    }
+    
+* {
+    box-sizing: border-box;
+  }
+  
+.bg-image {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+  
+ 
