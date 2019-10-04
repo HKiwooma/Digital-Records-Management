@@ -1,64 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/customized.css" />
+    <link rel="stylesheet" href="../css/all.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <title>Login</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="../css/customized.css" />
-  <link rel="stylesheet" href="../css/all.css" />
-  <link rel="stylesheet" href="../css/bootstrap.css" />
-  <title>Login</title>
-</head>
-
-<body>
-<div class="container login-wrap h-100 my-5 text-center">
-  <div class="d-flex justify-content-center h-100">
-    <div class="user_card ">
-      <div class="d-flex justify-content-center">
-        <div class="brand_logo_container">
-          <img src="../images/policelogo.jpeg" class="mb-4 my-5 rounded mx-auto d-block" alt="None" width="50%" height="50%" />
-        </div>
-      </div>
-      <div class="d-flex justify-content-center form_container">
-        <form action="#">
-          <div class="input-group mb-3">
-            <div class="input-group-append">
-              <span class="input-group-text"><i class="fas fa-user"></i></span>
-            </div>
-            <input type="text" name="" class="form-control input_user" value="" placeholder="username">
-          </div>
-          <div class="input-group mb-2">
-            <div class="input-group-append">
-              <span class="input-group-text"><i class="fas fa-key"></i></span>
-            </div>
-            <input type="password" name="" class="form-control input_pass" value="" placeholder="password">
-          </div>
-          <div class="form-group">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="customControlInline">
-              <label class="custom-control-label" for="customControlInline">Remember me</label>
+  <body>
+    <div class="container login-wrap h-100 my-5 text-center">
+      <div class="d-flex justify-content-center h-100">
+        <div class="user_card ">
+          <div class="d-flex justify-content-center">
+            <div class="brand_logo_container">
+              <img
+                src="../images/policelogo.jpeg"
+                class="mb-4 my-5 rounded mx-auto d-block"
+                alt="None"
+                width="50%"
+                height="50%"
+              />
             </div>
           </div>
-          <div class="d-flex justify-content-center login_container">
-            <button type="submit" class="btn btn-success">Submit</button>
+          <div class="d-flex justify-content-center form_container">
+            <form action="#">
+              <div class="input-group mb-3">
+                <div class="input-group-append">
+                  <span class="input-group-text"
+                    ><i class="fas fa-user"></i
+                  ></span>
+                </div>
+                <input
+                  type="text"
+                  name=""
+                  class="form-control input_user"
+                  value=""
+                  placeholder="username"
+                />
+              </div>
+              <div class="input-group mb-2">
+                <div class="input-group-append">
+                  <span class="input-group-text"
+                    ><i class="fas fa-key"></i
+                  ></span>
+                </div>
+                <input
+                  type="password"
+                  name=""
+                  class="form-control input_pass"
+                  value=""
+                  placeholder="password"
+                />
+              </div>
+              <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="customControlInline"
+                  />
+                  <label class="custom-control-label" for="customControlInline"
+                    >Remember me</label
+                  >
+                </div>
+              </div>
+              <div class="d-flex justify-content-center login_container">
+                <button type="submit" class="btn btn-success">Submit</button>
+              </div>
+            </form>
           </div>
 
-        </form>
-      </div>
-      
-      <div class="mt-4">
-        <div class="d-flex justify-content-center links">
-          Don't have an account? <a href="#" class="ml-2">Sign Up</a>
-        </div>
-        <div class="d-flex justify-content-center links">
-          <a href="#">Forgot your password?</a>
+          <div class="mt-4">
+            <div class="d-flex justify-content-center links">
+              Don't have an account?
+              <a href="signUp.html" class="ml-2">Sign Up</a>
+            </div>
+            <div class="d-flex justify-content-center links">
+              <a href="../index.html">Forgot your password?</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-  </div>
-</body>
-
+  </body>
 </html>
