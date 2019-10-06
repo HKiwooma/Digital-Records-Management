@@ -10,143 +10,50 @@
     <title>Home Page</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <!-- header section1 -->
-      <header>
-        <nav
-          class="navbar navbar-expand-md navbar-light fixed-top"
-          style="background-color: #729FCF;"
-        >
-          <div
-            class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2"
-          >
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#About">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Cases">Cases</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Contact Us">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-          <div class="mx-auto order-0">
-            <h1 class="navbar-brand mx-auto">Uganda Police</h1>
-          </div>
-          <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 ">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link btn-primary " href="include/homePg.html">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link btn-success" href="include/homePg.html">Sign Up</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-
-      <!-- Main section2 -->
-      <div class="container card text-center">
-        <div class="container-slide pt-3">
-          <div class="jumbotron card-body text-center">
-            <div class="card-body text-uppercase">
-              <img
-                src="images/policelogo.jpeg"
-                class="rounded mx-auto d-block"
-                alt="None"
-              />
-              <h2 class="card-title">Uganda Police!</h2>
-              <p class="card-text">
-                Protecting and serving the uganda nation since 1962.
-              </p>
-              <hr class="my-4" />
-              <a class="  btn btn-primary btn-lg" href="include/LoginPg.html" role="button"
-                >Login</a
-              >
-              <a class="btn btn-success btn-lg" href="include/signUp.html" role="button"
-                >SignUp</a
-              >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info rounded-pill">
+      
+        <img class="navbar-brand" src="images/policelogo.jpeg" width="100" height="90" alt="None">
+      <ul class="navbar-brand list-group list-group-flush text-uppercase">
+        <h1>Police</h1>
+        <h5>Protecting and Serving our nation</h5>
+                
+      </ul>
+      <a  href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
             </div>
-            <hr class="my-4" />
-            <div class="row">
-              <div class="col-lg-4">
-                <a href="include/LoginPg.html">
-                  <img
-                    class="rounded-circle"
-                    src="images/chains.jpeg"
-                    alt="Generic placeholder image"
-                    width="140"
-                    height="140"
-                  />
-                </a>
-
-                <h2>Cyber Crime</h2>
-                <p>
-                  When Della’s boyfriend Rob, and his friend Steve, begin
-                  holding “private” meetings in the couple’s basement, she knows
-                  something is up. A few weeks later, Rob comes home in a rush,
-                  ...
-                </p>
-              </div>
-              <!-- /.col-lg-4 -->
-              <div class="col-lg-4">
-                <a href="include/LoginPg.html">
-                  <img
-                    class="rounded-circle"
-                    src="images/stop.jpeg"
-                    alt="Generic placeholder image"
-                    width="140"
-                    height="140"
-                  />
-                </a>
-
-                <h2>Homicide</h2>
-                <p>
-                  Stella and Chris are out back target shooting when Chris
-                  accidentally shoots Stella in the abdomen. Because Chris is on
-                  probation, ....
-                </p>
-              </div>
-              <!-- /.col-lg-4 -->
-              <div class="col-lg-4">
-                <a href="include/LoginPg.html">
-                  <img
-                    class="rounded-circle"
-                    src="images/cool-police-officers.jpg"
-                    alt="Generic placeholder image"
-                    width="140"
-                    height="140"
-                  />
-                </a>
-
-                <h2>Terror</h2>
-                <p>
-                  On September 11, 2001, terrorists hijacked four airplanes in
-                  the U.S. After taking over the planes, the group flew two of
-                  them into the World Trade Center in ...
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
       </div>
-      <!-- Footer section -->
-
-      <footer
-        class="container card text-center"
-        style="background-color: #e9ecef;"
-      >
-        <p class="float-middle">
-          © 2019 Refactory. · <a href="#">Privacy</a> ·
-          <a href="http://www.refactory.ug">Terms</a>
-        </p>
-      </footer>
-    </div>
+    </nav>
+    
   </body>
 </html>
