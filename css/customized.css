@@ -1,5 +1,5 @@
 body {
-  background: #123F7E;
+  /* background: #123F7E; */
   /* height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
@@ -11,11 +11,11 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-/* body {
+body {
   background-image: url("../images/beautiful-cool-wallpapers.jpg");
 
   color: #6a6f8c;
-} */
+}
 
 /* .login-wrap {
   width: 100%;
