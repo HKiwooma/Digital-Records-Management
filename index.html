@@ -7,146 +7,226 @@
     <link rel="stylesheet" href="css/customized.css" />
     <link rel="stylesheet" href="css/all.css" />
     <link rel="stylesheet" href="css/bootstrap.css" />
+    <script src="js/all.js"></script>
+    <script src="js/bootstrap.js"></script>
     <title>Home Page</title>
   </head>
-  <body>
-    <div class="container-fluid">
-      <!-- header section1 -->
-      <header>
-        <nav
-          class="navbar navbar-expand-md navbar-light fixed-top"
-          style="background-color: #729FCF;"
-        >
-          <div
-            class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2"
-          >
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#About">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Cases">Cases</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Contact Us">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-          <div class="mx-auto order-0">
-            <h1 class="navbar-brand mx-auto">Uganda Police</h1>
-          </div>
-          <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 ">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link btn-primary " href="include/homePg.html">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link btn-success" href="include/homePg.html">Sign Up</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+  <body class="text-center">
+    <!-- header section -->
+    <header class="rounded-top">
+      <nav class="navbar navbar-dark" style="background-color: #123F7E;">
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/Ugpolicelogo.jpg"
+            width="40"
+            height="30"
+            class="d-inline-block align-top"
+            alt=""
+            />
+          Uganda Police Force
+        </a>
+        <div class="nav justify-content-end">
+          <ul class="nav nav-pills justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-success" href="#">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-      <!-- Main section2 -->
-      <div class="container card text-center">
-        <div class="container-slide pt-3">
-          <div class="jumbotron card-body text-center">
-            <div class="card-body text-uppercase">
-              <img
-                src="images/policelogo.jpeg"
-                class="rounded mx-auto d-block"
-                alt="None"
-              />
-              <h2 class="card-title">Uganda Police!</h2>
-              <p class="card-text">
-                Protecting and serving the uganda nation since 1962.
-              </p>
-              <hr class="my-4" />
-              <a class="  btn btn-primary btn-lg" href="include/LoginPg.html" role="button"
-                >Login</a
-              >
-              <a class="btn btn-success btn-lg" href="include/signUp.html" role="button"
-                >SignUp</a
-              >
-            </div>
-            <hr class="my-4" />
-            <div class="row">
-              <div class="col-lg-4">
-                <a href="include/LoginPg.html">
-                  <img
-                    class="rounded-circle"
-                    src="images/chains.jpeg"
-                    alt="Generic placeholder image"
-                    width="140"
-                    height="140"
-                  />
+    <!-- main body section -->
+
+    <div class="container-fluid rounded pt-3 card text-center">
+      <div class="jumbotron" style="background-color: #123F7E;">
+        <div
+          class="card-body text-uppercase text-light"
+          style="background-color: #123F7E;">
+          <div class="bd-example">
+            <div
+              id="carouselExampleCaptions"
+              class="carousel slide"
+              data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#carouselExampleCaptions"
+                  data-slide-to="0"
+                  class="active"></li>
+                <li
+                  data-target="#carouselExampleCaptions"
+                  data-slide-to="1"></li>
+                <li
+                  data-target="#carouselExampleCaptions"
+                  data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <img src="images/Ugpolicelogo.jpg" class="rounded mx-auto
+                  d-block" alt="None" />
+                <ul>
+
+                  <!-- <div class="carousel-caption d-none d-md-block"> -->
+                  <h5 class="card-title display-4">
+                    Uganda Police Force
+                  </h5>
+                  <!-- <p>
+                            We protect and serve our nation
+                          </p> -->
+                  <!-- </div> -->
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Second slide label</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>
+                        Praesent commodo cursus magna, vel scelerisque nisl
+                        consectetur.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  class="carousel-control-prev"
+                  href="#carouselExampleCaptions"
+                  role="button"
+                  data-slide="prev">
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
                 </a>
-
-                <h2>Cyber Crime</h2>
-                <p>
-                  When Della’s boyfriend Rob, and his friend Steve, begin
-                  holding “private” meetings in the couple’s basement, she knows
-                  something is up. A few weeks later, Rob comes home in a rush,
-                  ...
-                </p>
-              </div>
-              <!-- /.col-lg-4 -->
-              <div class="col-lg-4">
-                <a href="include/LoginPg.html">
-                  <img
-                    class="rounded-circle"
-                    src="images/stop.jpeg"
-                    alt="Generic placeholder image"
-                    width="140"
-                    height="140"
-                  />
+                <a
+                  class="carousel-control-next"
+                  href="#carouselExampleCaptions"
+                  role="button"
+                  data-slide="next">
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
                 </a>
-
-                <h2>Homicide</h2>
-                <p>
-                  Stella and Chris are out back target shooting when Chris
-                  accidentally shoots Stella in the abdomen. Because Chris is on
-                  probation, ....
-                </p>
-              </div>
-              <!-- /.col-lg-4 -->
-              <div class="col-lg-4">
-                <a href="include/LoginPg.html">
-                  <img
-                    class="rounded-circle"
-                    src="images/cool-police-officers.jpg"
-                    alt="Generic placeholder image"
-                    width="140"
-                    height="140"
-                  />
-                </a>
-
-                <h2>Terror</h2>
-                <p>
-                  On September 11, 2001, terrorists hijacked four airplanes in
-                  the U.S. After taking over the planes, the group flew two of
-                  them into the World Trade Center in ...
-                </p>
               </div>
             </div>
+          </div>
+          <hr class="my-4" />
+          <a href="#" class="btn btn-primary btn-lg" role="button"
+            aria-pressed="true">Login</a>
+          <!-- <a class="btn btn-primary btn-lg active" href="#" role="button">Login</a>
+          <a class="btn btn-success btn-lg" href="#" role="button">SignUp</a> -->
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <a href="#">
+              <img class="rounded-circle" src="images/chains.jpeg" alt="Generic
+                placeholder image" width="140" height="140" />
+            </a>
+
+            <h2>Cyber Crime</h2>
+            <p>
+              When Della’s boyfriend Rob, and his friend Steve, begin holding
+              “private” meetings in the couple’s basement, she knows something
+              is up. A few weeks later, Rob comes home in a rush, ...
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <a href="#">
+              <img class="rounded-circle" src="images/homicide.jpeg"
+                alt="Generic
+                placeholder image" width="140" height="140" />
+            </a>
+
+            <h2>Homicide</h2>
+            <p>
+              Stella and Chris are out back target shooting when Chris
+              accidentally shoots Stella in the abdomen. Because Chris is on
+              probation, ....
+            </p>
+            <!-- <p>and not allowed to handle or own a firearm, he is
+                                            reluctant to call 9-9-9, and simply carries Stella into the house
+                                            and attempts to render first aid. Stella dies of internal
+                                              bleeding. While the shooting of Stella was an accident, Chris
+                                              should have attempted to get help by calling the Paramedics.
+                                              Because he failed to do what any reasonable person would have done
+                                              in the same situation, chris has committed negligent homicide</p> -->
+            <!-- <p>
+                                              <a class="btn btn-secondary" href="#" role="button"
+                                                >View details »</a
+                                              >
+                                            </p> -->
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <a href="#">
+              <img class="rounded-circle" src="images/cool-police-officers.jpg"
+                alt="Generic placeholder image" width="140"
+                height="140" />
+            </a>
+
+            <h2>Terrorism</h2>
+            <p>
+              In its most basic definition, the term terrorism refers to any
+              act that that is perpetrated for the purpose of causing terror.
+              <details>
+                <summary class="btn btn-info">View details »</summary>
+                <p>There
+                  is no universal definition as to just what acts are considered
+                  terrorism, but it is commonly considered to be an action that
+                  causes fear and/or harm for a political, ideological,
+                  religious,  or economic objective. Acts of terrorism deliberately target
+                  civilians, neutral military personnel, or other
+                  non-combatants,
+                  with blatant disregard for their safety. To explore this
+                  concept, consider the following terrorism definition.
+                </p>
+              </details>
+            </p>
+
+
           </div>
         </div>
       </div>
-      <!-- Footer section -->
 
-      <footer
-        class="container card text-center"
-        style="background-color: #e9ecef;"
-      >
+
+      <!-- Footer section -->
+      <footer class="card text-center rounded" style="background-color:
+        #123F7E;">
         <p class="float-middle">
           © 2019 Refactory. · <a href="#">Privacy</a> ·
           <a href="http://www.refactory.ug">Terms</a>
         </p>
       </footer>
-    </div>
-  </body>
-</html>
+    </body>
+  </html>
+
+  <!-- <div class="card-body text-uppercase">
+  <img
+    src="images/Ugpolicelogo.jpg"
+    class="rounded mx-auto d-block"
+    alt="None"
+  />
+  <h2 class="card-title display-4">Uganda Police Force</h2>
+  <p class="card-text">
+    Protecting and serving the uganda nation since 1962.
+  </p>
+  <hr class="my-4" />
+  <a class="  btn btn-primary btn-lg" href="#" role="button">Login</a>
+  <a class="btn btn-success btn-lg" href="#" role="button">SignUp</a>
+</div> -->
