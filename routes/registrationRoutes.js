@@ -10,13 +10,15 @@ router.get("/", (req, res, next) => {
 
 // a document instance
 router.post("/", async (req, res) => {
-  const myRegister = new registrationPost(req.body);
+  const myRegister = new Registry(req.body);
   // save data using scheme collection name 'Register' to database
   try {
     await myRegister.save();
-    const items = await registrationPost.find();
-    res.render("login", { users: items });
+    const items = await Registry.find();
+    res.send('thank you for registering with us');
+    //res.render("login", {users: items});
   } catch (error) {
+    console.log(error)
     res.status(400).send("unable to save to database");
   }
 });

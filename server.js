@@ -29,7 +29,7 @@ app.use("/login", loginRoute);
 
 //connecting to the DB
 mongoose.connect(
-  "mongodb://localhost:27017/Police-db",
+  "mongodb://localhost:27017/police-db",
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => {
     console.log("Connected to DB");
