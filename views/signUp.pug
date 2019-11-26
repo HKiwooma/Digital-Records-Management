@@ -4,48 +4,42 @@ block content
         h2.card-tittle.mt-2 Register        
     article.card-body
         form(method="POST" action="/register")
-            div.form-row
-                div.col.form-group
-                    label(for="") First Name
-                    input.form-control(type="text" name="firstName")
-                div.col.form-group
-                    label(for="") Last Name
-                    input.form-control(type="text" name="lastName")
-                div.col.form-group
-                    label(for="") User Name
-                    input.form-control(type="text" name="userName")
-            div.form-group
-                label(for="") Email
-                input.form-control(type="email" name="emailAddress")
-                small.form-text.text-muted We'll never share your email with anyone else.
-            .form-group
-                label(for="").form-check.form-check-inline
-                    input.form-check-input(type="radio", name="gender")
-                    small.form-check-label Male
-                label(for="").form-check.form-check-inline
-                    input.form-check-input(type="radio", name="gender")
-                    small.form-check-label Female
             .form-row
                 .form-group.col-md-6
-                    label(for="") City
-                    input.form-control(type="text", name="city")
-                form-group.col-md-6
-                    label(for="") Country
-                    select.form-control(name="country")
-                        option(value="kenya") Kenya
-                        option(value="Tanzania") Tanzania
-                        option(value="Uganda" selected="") Uganda
-                        option(value="Saudi Arabia") Saudi Arabia
-                        option(value="England") England
+                    label(for="") User Name
+                .form-group.col-md-6
+                    input.form-control(type="text" name="userName")
+            .form-row
+                .form-group.col-md-6
+                    label(for="") Officer ID
+                .form-group.col-md-6
+                    input.form-control(type="text" name="officerID")
+            .form-row
+                .form-group.col-md-6
+                    label(for="") Gender
+                .form-group.col-md-6
+                    label(for="").form-check.form-check-inline
+                        input.form-check-input(type="radio", name="gender")
+                        small.form-check-label Male
+                    label(for="").form-check.form-check-inline
+                        input.form-check-input(type="radio", name="gender")
+                        small.form-check-label Female
+            .form-row
+                .form-group.col-md-6
+                    label(for="") Rank
+                .form-group.col-md-6
+                    select.form-control(name="rank")
+                        option(value="IGP") IGP
+                        option(value="others") Others
             .form-group
                 label(for="") Create password
                 input.form-control(type="password", name="password")
             .form-group
-                button.btn.btn-primary.btn-block(type="submit") Register
+                button.btn.btn-primary.btn-block.mb-3(type="submit") Register
             div.text-muted
                 small By clicking the 'Sign Up' button, you confirm that you accept our
             div.text-muted
                 small Terms of use and Privacy Policy.
             .border-top.card-body.text-center  Have an account? 
-                a(href="") Log In
+                a(href="./login.pug") Log In
 
