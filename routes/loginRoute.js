@@ -1,7 +1,7 @@
 
 const express = require("express");
 const router = express.Router();
-const registrationPost = require("../models/registrationModel");
+// const registrationPost = require("../models/registrationModel");
 
 //gets and displays a register page
 router.get('/', (req, res) => {
