@@ -17,7 +17,7 @@ const registrationRoute = require("./routes/registrationRoutes");
 app.use("/register", registrationRoute);
 
 /* connect to database */
-mongoose.Promise = global.Promise;
+//mongoose.Promise = global.Promise;
 mongoose.connect(
   "mongodb://localhost:27017/police-db",
   { useNewUrlParser: true, useUnifiedTopology: true },
