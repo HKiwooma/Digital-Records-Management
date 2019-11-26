@@ -1,0 +1,45 @@
+extends layout.pug 
+block content
+    header.card-header.align-items-center
+        h2.card-tittle.mt-2 Register        
+    article.card-body
+        form(method="POST" action="/register")
+            .form-row
+                .form-group.col-md-6
+                    label(for="") User Name
+                .form-group.col-md-6
+                    input.form-control(type="text" name="userName")
+            .form-row
+                .form-group.col-md-6
+                    label(for="") Officer ID
+                .form-group.col-md-6
+                    input.form-control(type="text" name="officerID")
+            .form-row
+                .form-group.col-md-6
+                    label(for="") Gender
+                .form-group.col-md-6
+                    label(for="").form-check.form-check-inline
+                        input.form-check-input(type="radio", name="gender")
+                        small.form-check-label Male
+                    label(for="").form-check.form-check-inline
+                        input.form-check-input(type="radio", name="gender")
+                        small.form-check-label Female
+            .form-row
+                .form-group.col-md-6
+                    label(for="") Rank
+                .form-group.col-md-6
+                    select.form-control(name="rank")
+                        option(value="IGP") IGP
+                        option(value="others") Others
+            .form-group
+                label(for="") Create password
+                input.form-control(type="password", name="password")
+            .form-group
+                button.btn.btn-primary.btn-block.mb-3(type="submit") Register
+            div.text-muted
+                small By clicking the 'Sign Up' button, you confirm that you accept our
+            div.text-muted
+                small Terms of use and Privacy Policy.
+            .border-top.card-body.text-center  Have an account? 
+                a(href="./login.pug") Log In
+
