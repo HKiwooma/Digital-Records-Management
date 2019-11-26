@@ -1,0 +1,15 @@
+extends layout.pug 
+block content
+    header.card-header.align-items-center
+        h2.card-tittle.mt-2 Login 
+    article.card-body
+        form(method="POST" action="/login")
+            div.form-row
+                .form-group
+                    label(for="") Enter password
+                    input.form-control(type="password", name="password")
+                .col.form-group
+                    label(for="") Officer Id
+                    input.form-control(type="text" name="officerId")
+                .form-group
+                    button.btn.btn-primary.btn-block(type="submit") Login
