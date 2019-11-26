@@ -28,6 +28,6 @@ mongoose.connect(
 // require("./models/registrationModel")
 
 //how to start listening to the serve
-app.listen(3000, () => {
-  console.log("listening on 3000");
+app.listen(1000, () => {
+  console.log("listening on 1000");
 });
