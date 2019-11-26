@@ -16,7 +16,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const registrationRoute = require("./routes/registrationRoutes");
 app.use("/register", registrationRoute);
 
-//connecting to the DB
+/* connect to database */
+mongoose.Promise = global.Promise;
 mongoose.connect(
   "mongodb://localhost:27017/police-db",
   { useNewUrlParser: true, useUnifiedTopology: true },
@@ -24,6 +25,7 @@ mongoose.connect(
     console.log("Connected to DB");
   }
 );
+// require("./models/registrationModel")
 
 //how to start listening to the serve
 app.listen(3000, () => {

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const registry = require("../models/registrationModel");
+const Registry = require("../models/registrationModel");
 
 // Routes
 //register page route.
@@ -10,14 +10,15 @@ router.get("/", (req, res, next) => {
 
 // a document instance
 router.post("/", async (req, res) => {
-  const myRegister = new registry(req.body);
+  const myRegister = new Registry(req.body);
   // save data using scheme collection name 'Register' to database
   try {
     await myRegister.save();
-    const items = await registry.find();
-    req.send('Thank You for registering with us')
+    const items = await Registry.find();
+    res.send('Thank You for registering with us')
     // res.render("login", { users: items });
   } catch (error) {
+    console.log(error)
     res.status(400).send("unable to save to database");
   }
 });
