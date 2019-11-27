@@ -1,26 +1,27 @@
 const express = require("express");
 const router = express.Router();
-// const registrationPost = require("../models/registrationModel");
+const Registry = require("../models/registrationModel");
 
-//gets and displays a register page
-router.get('/', (req, res) => {
-    res.render('login')
-})
+// Routes
+//register page route.
+router.get("/", (req, res, next) => {
+    res.render("login");
+});
 
-// submits a login page information
-router.post('/', async (req, res) => {
+// a document instance
+router.post("/", async (req, res) => {
+    const myRegister = new Registry(req.body);
+    // save data using scheme collection name 'Register' to database
     try {
-        //authenticate method compares 
-        const user = await Register.authenticate(req.body.officerId, req.body.password);
-
-        res.redirect('start')
-    } catch{
-        res.render('start', { error: "Failed to login, please try again" })
-
+        await myRegister.save();
+        const items = await Registry.find();
+        res.send('you have login');
+        //res.render("", {users: items});
+    } catch (error) {
+        console.log(error)
+        res.status(400).send("unable to save to database");
     }
-})
-
-
+});
 
 module.exports = router;
 

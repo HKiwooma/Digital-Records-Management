@@ -1,5 +1,2 @@
-<<<<<<< HEAD
-
-=======
-/.vscode/
->>>>>>> b64e4f737d1a345f107389ff2349805bdd30c772
+/node_modules
+package-lock.json
