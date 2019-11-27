@@ -1,15 +1,22 @@
 const express = require("express");
 const router = express.Router();
 const Registry = require("../models/registrationModel");
-
+const passport = require("passport");
 // Routes
 //register page route.
 router.get("/", (req, res, next) => {
-    res.render("login");
+  res.render("login");
 });
-
+router.post(
+  "/",
+  passport.authenticate("local", {
+    successRedirect: "/",
+    failureRedirect: "/login",
+    failureFlash: true
+  })
+);
 // a document instance
-router.post("/", async (req, res) => {
+/* router.post("/", async (req, res) => {
     const myRegister = new Registry(req.body);
     // save data using scheme collection name 'Register' to database
     try {
@@ -21,7 +28,6 @@ router.post("/", async (req, res) => {
         console.log(error)
         res.status(400).send("unable to save to database");
     }
-});
+}); */
 
 module.exports = router;
-

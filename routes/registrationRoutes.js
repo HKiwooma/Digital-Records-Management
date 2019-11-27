@@ -15,8 +15,9 @@ router.post("/", async (req, res) => {
   try {
     await myRegister.save();
     const items = await Registry.find();
-    res.send('thank you for registering with us');
-    //res.render("login", {users: items});
+    // res.send('thank you for registering with us');
+    res.render("login");
+    // res.render("login", {users: items});
   } catch (error) {
     console.log(error)
     res.status(400).send("unable to save to database");

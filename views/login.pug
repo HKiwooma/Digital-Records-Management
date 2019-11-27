@@ -4,14 +4,18 @@ block content
         h2.card-tittle.mt-2 Login 
     article.card-body
         form(method="POST" action="/login")
-            div.form-row
-                .form-group
+            .form-row
+                .form-group.col-md-4
+                    label(for="") Officer ID
+                .form-group.col-md-8
+                    input.form-control(type="text" name="officerID")
+            .form-row
+                .form-group.col-md-4
                     label(for="") Enter password
+                .form-group.col-md-8
                     input.form-control(type="password", name="password")
-                .col.form-group
-                    label(for="") Officer Id
-                    input.form-control(type="text" name="officerId")
-                .form-group
-                    button.btn.btn-primary.btn-block(type="submit") Login
-                    .border-top.card-body.text-center  don't have an account? 
-                a(href="./login.pug") sign Up
+            .form-group
+                .d-flex.justify-content-center 
+                    button.btn.btn-success.btn-rounded(type="submit") Login
+            .border-top.card-body.text-center  don't have an account? 
+                a(href="./signUp.pug") sign Up

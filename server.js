@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const passport = require("passport"), LocalStrategy = require("passport-local").Strategy;
 
 const app = express();
 app.set("view engine", "pug"); // Setting the view engine to pug
@@ -29,7 +30,23 @@ mongoose.connect(
     console.log("Connected to DB");
   }
 );
-// require("./models/registrationModel")
+//middleware for authetication
+passport.use(
+  new LocalStrategy(function(officerID, password, done) {
+    User.findOne({ officerID: officerID }, function(err, user) {
+      if (err) {
+        return done(err);
+      }
+      if (!user) {
+        return done(null, false, { message: "Incorrect officerID." });
+      }
+      if (!user.validPassword(password)) {
+        return done(null, false, { message: "Incorrect password." });
+      }
+      return done(null, user);
+    });
+  })
+);
 
 //how to start listening to the serve
 app.listen(3000, () => {
