@@ -12,9 +12,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Importing Routes
-// Define db routes
+// signUP route
 const registrationRoute = require("./routes/registrationRoutes");
 app.use("/register", registrationRoute);
+
+// signUP route
+const loginRoute = require("./routes/loginRoute");
+app.use("/login", loginRoute);
 
 /* connect to database */
 mongoose.Promise = global.Promise;
@@ -28,6 +32,6 @@ mongoose.connect(
 // require("./models/registrationModel")
 
 //how to start listening to the serve
-app.listen(1000, () => {
-  console.log("listening on 1000");
+app.listen(3000, () => {
+  console.log("listening on 3000");
 });

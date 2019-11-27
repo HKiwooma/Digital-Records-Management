@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
     try {
         await myRegister.save();
         const items = await Registry.find();
-        res.send('you have login');
+        res.send("you have logged in");
         //res.render("", {users: items});
     } catch (error) {
         console.log(error)
