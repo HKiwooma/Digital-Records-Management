@@ -7,13 +7,16 @@ const passport = require("passport");
 router.get("/", (req, res, next) => {
   res.render("login");
 });
-router.post(
-  "/",
-  passport.authenticate("local", {
+router.post("/",
+  passport.authenticate("local",
+  (req,res)=>{ 
+      console.log("thank for logging in");
+  } 
+  /* {
     successRedirect: "/",
     failureRedirect: "/login",
     failureFlash: true
-  })
+  } */)
 );
 // a document instance
 /* router.post("/", async (req, res) => {
