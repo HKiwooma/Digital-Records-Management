@@ -10,7 +10,10 @@ app.set("views", path.join(__dirname, "views")); // Setting the folder path
 
 // body-parser to parse request body data
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Importing Routes
 // signUP route

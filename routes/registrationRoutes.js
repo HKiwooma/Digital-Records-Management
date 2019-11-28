@@ -5,7 +5,10 @@ const Registry = require("../models/registrationModel");
 // Routes
 //register page route.
 router.get("/", (req, res, next) => {
-  res.render("signUp");
+  res.render("signUp", {
+    pageTitle: "Sign Up",
+    path: "/register"
+  });
 });
 
 // a document instance
@@ -16,7 +19,7 @@ router.post("/", async (req, res) => {
     await myRegister.save();
     const items = await Registry.find();
     // res.send('thank you for registering with us');
-    res.render("login");
+    res.redirect("/login");
     // res.render("login", {users: items});
   } catch (error) {
     console.log(error)
@@ -25,3 +28,14 @@ router.post("/", async (req, res) => {
 });
 
 module.exports = router;
+
+/* // /admin/add-product => GET
+router.get('/add-product', (req, res, next) => {
+  res.render('add-product', { pageTitle: 'Add Product', path: '/admin/add-product' });
+});
+
+// /admin/add-product => POST
+router.post('/add-product', (req, res, next) => {
+  products.push({ title: req.body.title });
+  res.redirect('/');
+}); */

@@ -5,7 +5,10 @@ const passport = require("passport");
 // Routes
 //register page route.
 router.get("/", (req, res, next) => {
-  res.render("login");
+  res.render("login", {
+    pageTitle: "Sign Up",
+    path: "/login"
+  });
 });
 router.post("/",
   passport.authenticate("local",
