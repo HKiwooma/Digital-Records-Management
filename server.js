@@ -1,31 +1,32 @@
-const express = require("express");
-const path = require("path");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const passport = require("passport"), LocalStrategy = require("passport-local").Strategy;
+const express = require("express"),
+  path = require("path"),
+  bodyParser = require("body-parser"),
+  mongoose = require("mongoose"),
+  passport = require("passport"),
+  LocalStrategy = require("passport-local").Strategy;
 
+// main config
 const app = express();
-app.set("view engine", "pug"); // Setting the view engine to pug
-app.set("views", path.join(__dirname, "views")); // Setting the folder path
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(express.cookieParser("your secret here"));
+app.use(express.session());
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));
 
 // body-parser to parse request body data
-app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json);
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, "public")));
+// passport config
+const Registry = require("./models/registrationModel");
+passport.use(new LocalStrategy(Registry.authenticate()));
+passport.serializeUser(Registry.serializeUser());
+passport.deserializeUser(Registry.deserializeUser());
 
-// Importing Routes
-// signUP route
-const registrationRoute = require("./routes/registrationRoutes");
-app.use("/register", registrationRoute);
-
-// signUP route
-const loginRoute = require("./routes/loginRoute");
-app.use("/login", loginRoute);
-
-/* connect to database */
-mongoose.Promise = global.Promise;
 mongoose.connect(
   "mongodb://localhost:27017/police-db",
   { useNewUrlParser: true, useUnifiedTopology: true },
@@ -33,23 +34,9 @@ mongoose.connect(
     console.log("Connected to DB");
   }
 );
-//middleware for authetication
-passport.use(
-  new LocalStrategy(function(officerID, password, done) {
-    User.findOne({ officerID: officerID }, function(err, user) {
-      if (err) {
-        return done(err);
-      }
-      if (!user) {
-        return done(null, false, { message: "Incorrect officerID." });
-      }
-      if (!user.validPassword(password)) {
-        return done(null, false, { message: "Incorrect password." });
-      }
-      return done(null, user);
-    });
-  })
-);
+
+// Importing Routes
+require("./routes/registrationRoutes");
 
 //how to start listening to the serve
 app.listen(3000, () => {

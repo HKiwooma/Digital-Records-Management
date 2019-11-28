@@ -1,7 +1,9 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose"),
+  Schema = mongoose.Schema,
+  passportLocalMongoose = require("passport-local-mongoose");
 
 // Schema defintion
-const registrationSchema = new mongoose.Schema({
+const Registry = new Schema({
   userName: {
     type: String,
     required: [true, "Please Enter User name"]
@@ -21,4 +23,6 @@ const registrationSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model("Registries", registrationSchema);
+Registry.plugin(passportLocalMongoose);
+
+module.exports = mongoose.model("Registry", Registry);
