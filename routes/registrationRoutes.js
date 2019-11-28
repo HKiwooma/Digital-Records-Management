@@ -2,7 +2,6 @@ const express = require("express"),
 router = express.Router(),
 Registry = require("../models/registrationModel"),
 passport = require("passport");
-
 // Routes
 //register page route..
 router.get("/register", function(req, res) {
@@ -36,4 +35,5 @@ router.get("/login", function(req, res) {
     console.log("thank for logging in");
     res.send('thank you for registering with us')
   });
+)
 module.exports = router;

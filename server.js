@@ -19,7 +19,7 @@ app.set("views", path.join(__dirname, "views"));
 
 // body-parser to parse request body data
 app.use(bodyParser.json);
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // passport config
 const Registry = require("./models/registrationModel");
