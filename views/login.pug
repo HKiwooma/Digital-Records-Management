@@ -1,21 +1,25 @@
-extends layout.pug 
+extends layout
+
 block content
-    header.card-header.align-items-center
+div.row.justify-content-center
+  div.col-md-6
+    div.card
+      header.card-header.align-items-center
         h2.card-tittle.mt-2 Login 
-    article.card-body
+      article.card-body
         form(method="POST" action="/login")
-            .form-row
-                .form-group.col-md-4
-                    label(for="") Officer ID
-                .form-group.col-md-8
-                    input.form-control(type="text" name="officerID")
-            .form-row
-                .form-group.col-md-4
-                    label(for="") Enter password
-                .form-group.col-md-8
-                    input.form-control(type="password", name="password")
-            .form-group
-                .d-flex.justify-content-center 
-                    button.btn.btn-success.btn-rounded.btn-block.text-uppercase(type="submit") Login
-            .border-top.card-body.text-center  if you don't have an account? 
-                a(href="/register") sign Up
+          .form-row
+            .form-group.col-md-4
+              label(for="") Officer ID
+            .form-group.col-md-8
+              input.form-control(type="text" name="officerID")
+          .form-row
+            .form-group.col-md-4
+              label(for="") Enter password
+            .form-group.col-md-8
+              input.form-control(type="password", name="password")
+          .form-group
+            .d-flex.justify-content-center 
+              button.btn.btn-success.btn-rounded.btn-block.text-uppercase(type="submit") Login
+          .border-top.card-body.text-center  if you don't have an account? 
+            a(href="/register") sign Up

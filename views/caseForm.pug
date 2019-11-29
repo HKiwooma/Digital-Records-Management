@@ -25,20 +25,40 @@ block content
                             input.form-control(type="text" name="lastname", placeholder="Last Name")
                             
             .form-row
-                .form-group.col-sm-4
-                    label(for="") Officer Id
-                .form-group.col-md-8
+                .form-group.col-sm-2
+                    label(for="") Gender:
+                .form-group.col-md-10
                     input.form-control(type="password", name="OfficerId", placeholder="Officer Id")
+                    select(name="gender")
+                        .form-control
+                            option(value="Male/Adult") Male / Adult
+                            option(value="Male/Juvenile") Male / Juvenile
+                            option(value="Female/Adult") Female / Adult
+                            option(value="Female/Juvenile") Female / Juvenile
+                            </select>
             .form-row
                 .form-group.col-sm-2
-                    label(for="") Ref. No:
+                    label(for="") Age:
                 .form-group.col-sm-10
-                    input.form-control(type="text", name="RefNo", placeholder="Ref. No")
+                    input.form-control(type="text", name="age", placeholder="Age")
             .form-row
-                .form-group.col-sm-4
-                    label(for="") Officer Id
-                .form-group.col-md-8
-                    input.form-control(type="password", name="OfficerId", placeholder="Officer Id")
+                .form-group.col-sm-2
+                    label(for="") Nationality:
+                .form-group.col-sm-10
+                    input.form-control(type="text", name="nationality", placeholder="Nationality")
+            .form-row
+                .form-group.col-sm-2
+                    label(for="") Residence:
+                .form-group.col-sm-10
+                    .row
+                        .col-sm-12
+                            input.form-control(type="text" name="district", placeholder="District")
+                        .col-sm-12
+                            input.form-control(type="text" name="division", placeholder="Division")
+                        .col-sm-12
+                            input.form-control(type="text" name="parish", placeholder="Parish")
+                        .col-sm-12
+                            input.form-control(type="text" name="Village", placeholder="Village")
             .form-group
                 .d-flex.justify-content-center 
                     button.btn.btn-success.btn-rounded.btn-block.text-uppercase(type="submit") Login
@@ -51,61 +71,6 @@ block content
                 <form action="#">
                     7
 
-                    
-                    </div>
-                    <div class="row" style="margin-bottom:1%;">
-                        <div class="col-sm-2">
-                            Gender:
-                        </div>
-                        <div class="col-sm-6">
-                            <select name="gender" id="gender"
-                                class="form-control">
-                                <option value="">Select Gender</option>
-                                <option value="mA">Male / Adult</option>
-                                <option value="mJ">Male / Juvenile</option>
-                                <option value="fA">Female / Adult</option>
-                                <option value="fJ">Female / Juvenile</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row" style="margin-bottom:1%;">
-                        <div for="" class="col-sm-2">Age:</div>
-                        <div class="col-sm-6">
-                            <input type="text" name="age"
-                                class="form-control" placeholder="Age">
-                        </div>
-                    </div>
-                    <div class="row" style="margin-bottom:1%;">
-                        <div for="" class="col-sm-2">Residence:</div>
-                        <div class="col-sm-6">
-                            <div class="row">
-                                <div class="col-sm-12"
-                                    style="margin-bottom:1%;">
-                                    <input type="text" name="district"
-                                        class="form-control"
-                                        placeholder="District">
-                                </div>
-                                <div class="col-sm-12"
-                                    style="margin-bottom:1%;">
-                                    <input type="text" name="division"
-                                        class="form-control"
-                                        placeholder="Division">
-                                </div>
-                                <div class="col-sm-12"
-                                    style="margin-bottom:1%;">
-                                    <input type="text" name="parish"
-                                        class="form-control"
-                                        placeholder="Parish">
-                                </div>
-                                <div class="col-sm-12"
-                                    style="margin-bottom:1%;">
-                                    <input type="text" name="village"
-                                        class="form-control"
-                                        placeholder="Village">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="row" style="margin-bottom:1%;">
                         <div for="" class="col-sm-2">Rental:</div>
@@ -138,13 +103,7 @@ block content
                                 placeholder="Telephone Number">
                         </div>
                     </div>
-                    <div class="row" style="margin-bottom:1%;">
-                        <div for="" class="col-sm-2">Nationality:</div>
-                        <div class="col-sm-6">
-                            <input type="text" name="nationality"
-                                class="form-control"
-                                placeholder="Nationality">
-                        </div>
+                    
                     </div>
 
                     <div class="row" style="margin-bottom:1%;">
@@ -154,12 +113,12 @@ block content
                         <div class="col-sm-6">
                             <select name="country" id="country"
                                 class="form-control">
-                                <option value="">Select Crime Type</option>
-                                <option value="murder">Murder</option>
-                                <option value="rape">Rape</option>
-                                <option value="cyber">Cyber</option>
-                                <option value="fraud">Fraud</option>
-                                <option value="other">Others</option>
+                            option value="">Select Crime Type</option>
+                            option value="murder">Murder</option>
+                            option value="rape">Rape</option>
+                            option value="cyber">Cyber</option>
+                            option value="fraud">Fraud</option>
+                            option value="other">Others</option>
                             </select>
                         </div>
                     </div>
